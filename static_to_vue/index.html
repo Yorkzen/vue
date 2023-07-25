@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From static HTML to a Vue Instance</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__section">
+            <p class="header__task-name">💻 Coding Task</p>
+            <p class="header__bootcamp-info-wrapper">
+                <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
+                <a href="https://www.coding-bootcamps.eu/" class="header__bootcamp-link">coding-bootcamps.eu</a>
+            </p>
+        </section>
+    </header>
+    <main>
+        <div class="inside">
+            <div class="card" id="main-app"> <!-- Change the ID to "main-app" -->
+                <h2>Welcome back <strong>{{ userName }}</strong>!</h2>
+                <p>
+                    You logged in on {{ currentDate }}<br />
+                    We wish you a pleasant day.
+                </p>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - v-on Counter</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="app" class="inside">
+        <header>
+            <div>
+                <h1>Counter</h1>
+                <small>(click the white area)</small>
+            </div>
+            <!-- Use v-on directive to listen for click events on the reset button -->
+            <button @click="resetCount">Reset</button>
+        </header>
+        <!-- Use v-on directive to listen for click events on the main area -->
+        <main @click="increaseCount" :style="{ '--counter': count + '%' }">
+            <label id="counter">{{ count }}</label>
+        </main>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books from O'Reilly Media</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3.2.14/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <main>
+        <div id="app" class="inside">
+            <h1>Books from O'Reilly Media</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>ISBN</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Price</th>
+                        <th>Number of Pages</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="book in oreillyBooks" :key="book.isbn">
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.isbn }}</td>
+                        <td>{{ book.author }}</td>
+                        <td>{{ book.publisher }}</td>
+                        <td>{{ book.price }}</td>
+                        <td>{{ book.numPages }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

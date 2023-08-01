@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits and a box</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__section">
+            <p class="header__task-name">💻 Coding Task</p>
+            <p class="header__bootcamp-info-wrapper">
+                <span class="header__bootcamp-modul"><strong>Modul:</strong> Web Apps with Vue.js - Part 1</span>
+                <a href="https://www.coding-bootcamps.eu/" class="header__bootcamp-link">coding-bootcamps.eu</a>
+            </p>
+        </section>
+    </header>
+    <main>
+        <div id="app" class="inside">
+            <h1>Task 1</h1>
+            <div id="area" v-on:mousemove.self="updateCoordinates">
+                <span>x: {{ x }}, y: {{ y }}</span>
+                <div class="dead-spot">DEAD SPOT</div>
+            </div>
+            <h1>Task 2</h1>
+            <ul class="fruit-basket">
+                <li v-for="fruit in fruitBasket" :key="fruit" class="fruit-basket--item">
+                    <span>{{ fruit }}</span>
+                    <button v-on:click="removeFruit(fruit)">Remove</button>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
